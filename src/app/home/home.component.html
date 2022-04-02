@@ -1,0 +1,20 @@
+<h2>Home</h2>
+<p>Gabriel Mármore</p>
+<p>RA 0050832011036</p>
+<a href="https://github.com/GabrielMarmore" target="_blank">
+  https://github.com/GabrielMarmore
+</a>
+<h3>Cronômetro</h3>
+<div>
+  <label for="time">Time ( ms )</label>
+  <input
+    (click)="timer.stop(); timer.start(ms)"
+    id="time"
+    type="number"
+    step="1000"
+    [(ngModel)]="ms"
+  />
+</div>
+{{ timer.getCount() }}s
+<button (click)="timer.start(ms)">Iniciar</button>
+<button (click)="timer.stop()">Parar</button>
